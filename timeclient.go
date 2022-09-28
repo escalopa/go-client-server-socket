@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"net"
-	"os"g
+	"os"
 )
 
 func main() {
