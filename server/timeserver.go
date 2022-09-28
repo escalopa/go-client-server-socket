@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/escalopa/go-client-server-socket/constants"
 	"net"
 	"os"
 	"time"
@@ -9,7 +10,7 @@ import (
 
 func main() {
 
-	server, err := net.Listen(ServerType, ServerHost+":"+ServerPort)
+	server, err := net.Listen(constants.ServerType, constants.ServerHost+":"+constants.ServerPort)
 	if err != nil {
 		fmt.Println("Error listening:", err.Error())
 		os.Exit(1)
@@ -17,7 +18,7 @@ func main() {
 
 	defer server.Close()
 
-	fmt.Println("Listening on " + ServerHost + ":" + ServerPort)
+	fmt.Println("Listening on " + constants.ServerHost + ":" + constants.ServerPort)
 	fmt.Println("Waiting for client...")
 
 	for {

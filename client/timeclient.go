@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"github.com/escalopa/go-client-server-socket/constants"
 	"net"
 	"os"
 )
@@ -14,7 +15,7 @@ func main() {
 	ip, _ := reader.ReadString('\n')
 
 	// Establish `connection` wit the server
-	connection, err := net.Dial(ServerType, ip+":"+ServerPort)
+	connection, err := net.Dial(constants.ServerType, ip[:len(ip)-1]+":"+constants.ServerPort)
 	if err != nil {
 		fmt.Println("Error connecting:", err.Error())
 		os.Exit(1)
