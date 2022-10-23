@@ -1,5 +1,7 @@
 # go-client-server-socket
 
+This project goal is to create a connections socket between `client` & `server` only using `sockets` 
+
 ### Installation
 
 1. Clone the repo with command 
